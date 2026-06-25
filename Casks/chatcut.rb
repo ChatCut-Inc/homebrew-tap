@@ -1,16 +1,14 @@
 cask "chatcut" do
-  arch arm: "arm64", intel: "x64"
-
   version "0.1.0"
-  sha256 arm:   "0000000000000000000000000000000000000000000000000000000000000000",
-         intel: "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "dfc57ea674f1af5415cbd51865599574390688a80850df1ee563034ce1526418"
 
-  url "https://github.com/ChatCut-Inc/chatcut-desktop/releases/download/v#{version}/ChatCut-#{version}-#{arch}.dmg"
+  url "https://github.com/ChatCut-Inc/chatcut-desktop/releases/download/v#{version}/ChatCut-#{version}-arm64.dmg"
   name "ChatCut"
   desc "AI-powered video editor"
   homepage "https://chatcut.io"
 
   auto_updates true
+  depends_on arch: :arm64
   depends_on macos: ">= :ventura"
 
   app "ChatCut.app"
